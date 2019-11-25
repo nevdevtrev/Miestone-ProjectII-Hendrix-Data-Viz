@@ -7,7 +7,7 @@ queue()
 function createCharts(error, hendrixData) {
    var ndx = crossfilter(hendrixData);
 
-  show_sfps_per_person();
+  show_sfps_per_person(ndx);
   
     
 }
@@ -17,7 +17,7 @@ function show_sfps_per_person(ndx){
     var dim = ndx.dimension(dc.pluck('Created By'));
     var group = dim.group().reduceSum(dc.pluck('SFP No.'));
     
-    dc.barchart("#sfps_per_person_chart")
+    dc.barChart("#sfps_per_person_chart")
     .width(800)
     .height(800)
     .dimension(dim)
