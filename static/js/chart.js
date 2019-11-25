@@ -9,7 +9,7 @@ function createCharts(error, hendrixData) {
 
   show_sfps_per_person(ndx);
   
-    
+    dc.renderAll();
 }
 
 
@@ -30,5 +30,4 @@ function show_sfps_per_person(ndx){
     .xAxisLabel("People")
     .yAxis().ticks(6);
     
-     dc.renderAll();
 }
