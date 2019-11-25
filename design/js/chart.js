@@ -1,5 +1,5 @@
 queue()
-    .defer(d3.csv, "assets/Hendrix.csv")
+    .defer(d3.csv, "data/Hendrix.csv")
     .await(createCharts);
     
 
